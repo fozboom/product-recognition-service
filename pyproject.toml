@@ -1,0 +1,7 @@
+[project]
+name = "ml-edidantix-task"
+version = "0.1.0"
+description = "Test task for Evidantix internship"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = []
