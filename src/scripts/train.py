@@ -9,7 +9,7 @@ from spacy.training.example import Example
 from product_recognition_service.logging_setup import setup_logging
 
 TRAIN_DATA_PATH = Path(__file__).resolve().parents[2] / "data" / "processed" / "spacy_training_data.json"
-MODEL_OUTPUT_DIR = Path(__file__).resolve().parents[2] / "models" / "product_ner_model_v2"
+MODEL_OUTPUT_DIR = Path(__file__).resolve().parents[2] / "models" / "product_ner_model"
 N_ITER = 50
 
 logger = logging.getLogger(__name__)
