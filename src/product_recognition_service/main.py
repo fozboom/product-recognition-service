@@ -4,14 +4,13 @@ from pathlib import Path
 from typing import Annotated
 
 import spacy
-import uvicorn
-import yaml
 from fastapi import Depends, FastAPI, Form, HTTPException, Request
 from fastapi.responses import HTMLResponse, JSONResponse
 from fastapi.templating import Jinja2Templates
 from pydantic_settings import BaseSettings
 from spacy.language import Language
-from url_processor import URLProcessor
+
+from .url_processor import URLProcessor
 
 # Get logger with a specific name that matches the one in logging_config.yaml
 logger = logging.getLogger("src.product_recognition_service.main")
@@ -99,22 +98,3 @@ async def extract_products(
     except Exception as e:
         logger.exception(f"An unexpected error occurred while processing URL '{url}': {e}")
         raise HTTPException(status_code=500, detail="An internal server error occurred.")
-
-
-if __name__ == "__main__":
-    # Load logging configuration from YAML file
-    log_config_path = Path(__file__).resolve().parents[2] / "logging_config.yaml"
-    log_config = None
-    if log_config_path.exists():
-        with open(log_config_path, 'r') as f:
-            log_config = yaml.safe_load(f)
-
-    logger.info("Starting Uvicorn server...")
-    logger.info("Visit http://127.0.0.1:8000 in your browser.")
-    uvicorn.run(
-        "main:app", 
-        host="0.0.0.0", 
-        port=8000, 
-        reload=True, 
-        log_config=log_config
-    )
