@@ -9,7 +9,7 @@ You can run this project locally for development or use Docker for a containeriz
 ### Prerequisites
 
 - [Python 3.12+](https://www.python.org/)
-- [Docker](https.://www.docker.com/)
+- [Docker](https://www.docker.com/)
 
 ### Local Development
 
