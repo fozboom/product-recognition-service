@@ -46,7 +46,7 @@ You can run this project locally for development or use Docker for a containeriz
     The application is a FastAPI service. Run it with `uvicorn` (through `uv`):
 
     ```bash
-    uv run uvicorn src.product_recognition_service.main:app --host 0.0.0.0 --port 8000 --reload
+    uv run uvicorn src.product_recognition_service.main:app --log-config logging_config.yaml --host 0.0.0.0 --port 8000 --reload
     ```
     The `--reload` flag enables hot-reloading for development. The service will be available at [http://localhost:8000](http://localhost:8000).
 
