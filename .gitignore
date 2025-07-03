@@ -16,9 +16,12 @@ wheels/
 models/
 
 
-# Data
-data/
+# 
+
+data/processed/
+
 .test.txt
+
 
 
 
