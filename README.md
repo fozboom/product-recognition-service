@@ -2,7 +2,7 @@
 
 This project is a web service for extracting product names from furniture store websites using a Named Entity Recognition (NER) model.
 
-## Getting Started
+## 🚀 Getting Started
 
 You can run this project locally for development or use Docker for a containerized setup.
 
@@ -78,7 +78,7 @@ Before running the application, you may need to train the Named Entity Recogniti
     This script will train a new spaCy model and save it to the `models/product_ner_model` directory. The trained model will then be used by the application.
 
 ## 📂 Project Structure
-
+-   `data` - Contains data files, such as the list of URLs for parsing and processed data
 -   `src/`: Main source code.
     -   `product_recognition_service/`: The core FastAPI application for product recognition.
     -   `scripts/`: Helper scripts for tasks like training the model, processing data, etc.
